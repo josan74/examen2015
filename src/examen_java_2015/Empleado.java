@@ -14,9 +14,11 @@ public abstract class Empleado {
     private String dni;
     private String nombre;
     private String apellidos;
+    protected double sueldo;
 
     //constructor vacio
     public Empleado() {
+       
     }
     
     //constructor con parametros
@@ -24,6 +26,7 @@ public abstract class Empleado {
         this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
+        setSueldo();
     }
 
     public String getDni() {
@@ -50,8 +53,12 @@ public abstract class Empleado {
         this.apellidos = apellidos;
     }
     
+    public double getSueldo( ) {
+        return sueldo;
+    }
+    
     //todos los trabajadores tendrán sueldo, pero será distinto para cada uno.
-    public abstract double sueldo();
+    public abstract void setSueldo();
     
     
 }

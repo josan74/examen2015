@@ -12,7 +12,10 @@ package examen_java_2015;
 public class Horas extends Empleado {
     private int horas;
     
+    private double sueldo;
+    
     public Horas() {
+        
     }
 
     public Horas(String dni, String nombre, String apellidos, int horas) {
@@ -21,8 +24,8 @@ public class Horas extends Empleado {
     }
 
     @Override
-    public double sueldo() {
-        double sueldo;
+    public void setSueldo() {
+        
         if(horas<160){
             sueldo=horas*8.5;
         }else{
@@ -30,7 +33,17 @@ public class Horas extends Empleado {
             extras=horas-160;
             sueldo= 160*8.5 + extras*11.5; 
         }
-        return sueldo;
+        
     }
+
+    public int getHoras() {
+        return horas;
+    }
+
+    public void setHoras(int horas) {
+        this.horas = horas;
+    }
+    
+    
     
 }

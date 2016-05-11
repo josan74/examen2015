@@ -11,7 +11,10 @@ package examen_java_2015;
  */
 public class Fijo extends Empleado{
 
+    private final static double SUELDO_FIJO= 1300;
+    
     public Fijo() {
+        
     }
 
     public Fijo(String dni, String nombre, String apellidos) {
@@ -20,10 +23,8 @@ public class Fijo extends Empleado{
     
     
     @Override
-    public double sueldo() {
-        double SUELDO=1300;
-        
-        return SUELDO;
+    public void setSueldo() {
+        sueldo = SUELDO_FIJO;
         
     }
     

@@ -11,7 +11,15 @@ package examen_java_2015;
  */
 public class Comision extends Empleado {
 
-    double ventas;
+    private double ventas;
+
+    public double getVentas() {
+        return ventas;
+    }
+
+    public void setVentas(double ventas) {
+        this.ventas = ventas;
+    }
     
     public Comision() {
     }
@@ -23,11 +31,9 @@ public class Comision extends Empleado {
 
     
     @Override
-    public double sueldo() {
+    public void setSueldo() {
         double comision=ventas*0.25;
-        double sueldo;
         sueldo=500+comision;
-        return sueldo;
     }
     
 }
